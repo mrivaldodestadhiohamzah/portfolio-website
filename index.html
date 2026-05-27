@@ -117,7 +117,7 @@
         <h2 data-i18n="projects.title">Project yang menunjukkan kemampuan saya membangun produk digital.</h2>
       </div>
 
-      <div class="featured-project project-card">
+      <article class="featured-project project-card clickable-project" data-project-id="nerva" tabindex="0" role="button" aria-label="Open NERVA project details">
         <div class="project-media gallery nerva-gallery">
           <!-- Change NERVA image paths here if your extensions or filenames are different. -->
           <img src="assets/moodc.png" alt="NERVA mood check screen" />
@@ -125,6 +125,7 @@
           <img src="assets/history.png" alt="NERVA history screen" />
           <img src="assets/result.png" alt="NERVA result screen" />
           <img src="assets/interface.png" alt="NERVA interface screen" />
+          <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
         </div>
         <div class="project-content">
           <span class="project-label" data-i18n="project.nerva.label">Featured Project</span>
@@ -133,22 +134,20 @@
             NERVA adalah versi pengembangan dari HIMO. NERVA merupakan platform web mental wellness yang menggabungkan hasil kuesioner DASS-21 dan analisis teks curhat untuk memantau tingkat stres pengguna.
           </p>
           <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>DASS-21</span><span>Dashboard UI</span>
+            <span>React</span><span>Tailwind CSS</span><span>Express.js</span><span>DASS-21</span><span>Dashboard UI</span>
           </div>
           <div class="project-actions">
-            <!-- Replace # with the real NERVA live demo link later. -->
-            <a class="btn small primary" href="#" data-i18n="projects.liveDemo">Live Demo</a>
-            <!-- Replace # with the real NERVA source code link later. -->
-            <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+            <button class="btn small primary view-details" type="button" data-project-id="nerva" data-i18n="projects.viewDetails">Lihat Detail</button>
           </div>
         </div>
-      </div>
+      </article>
 
       <div class="project-grid">
-        <article class="project-card">
+        <article class="project-card clickable-project" data-project-id="notes" tabindex="0" role="button" aria-label="Open Notes Studio project details">
           <div class="project-media">
             <!-- Change Notes Studio image path here if needed. -->
             <img src="assets/notes.png" alt="Notes Studio project screenshot" />
+            <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
             <h3 data-i18n="project.notes.title">Notes Studio</h3>
@@ -159,17 +158,18 @@
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Local Storage</span>
             </div>
             <div class="project-actions">
-              <a class="btn small primary" href="https://mrivaldodestadhiohamzah.github.io/NoteStudio/" target="_blank" rel="noopener" data-i18n="projects.liveDemo">Live Demo</a>
-              <!-- Replace # with the real Notes Studio source code link later. -->
-              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+              <button class="btn small primary view-details" type="button" data-project-id="notes" data-i18n="projects.viewDetails">Lihat Detail</button>
+              <a class="btn small ghost" href="https://mrivaldodestadhiohamzah.github.io/NoteStudio/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Demo Langsung</a>
+              <a class="btn small ghost" href="https://github.com/mrivaldodestadhiohamzah/NoteStudio" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source Code</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card clickable-project" data-project-id="story" tabindex="0" role="button" aria-label="Open StoryNest project details">
           <div class="project-media">
             <!-- Change StoryNest image path here if needed. -->
             <img src="assets/StoryNest.png" alt="StoryNest project screenshot" />
+            <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
             <h3 data-i18n="project.story.title">StoryNest</h3>
@@ -180,19 +180,20 @@
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Responsive UI</span>
             </div>
             <div class="project-actions">
-              <a class="btn small primary" href="https://mrivaldodestadhiohamzah.github.io/StoryNest/" target="_blank" rel="noopener" data-i18n="projects.liveDemo">Live Demo</a>
-              <!-- Replace # with the real StoryNest source code link later. -->
-              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+              <button class="btn small primary view-details" type="button" data-project-id="story" data-i18n="projects.viewDetails">Lihat Detail</button>
+              <a class="btn small ghost" href="https://mrivaldodestadhiohamzah.github.io/StoryNest/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Demo Langsung</a>
+              <a class="btn small ghost" href="https://github.com/mrivaldodestadhiohamzah/StoryNest" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source Code</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card wide-card">
+        <article class="project-card wide-card clickable-project" data-project-id="himo" tabindex="0" role="button" aria-label="Open HIMO project details">
           <div class="project-media gallery himo-gallery">
             <!-- Change HIMO image paths here if needed. -->
             <img src="assets/sebelum.png" alt="HIMO input screen" />
             <img src="assets/sesudah.png" alt="HIMO result screen" />
             <img src="assets/akunhasil.png" alt="HIMO account result screen" />
+            <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
             <span class="project-label muted" data-i18n="project.himo.label">Earlier version before NERVA</span>
@@ -204,10 +205,7 @@
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>ML Concept</span><span>UI/UX Design</span>
             </div>
             <div class="project-actions">
-              <!-- Replace # with the real HIMO live demo link later. -->
-              <a class="btn small primary" href="#" data-i18n="projects.liveDemo">Live Demo</a>
-              <!-- Replace # with the real HIMO source code link later. -->
-              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+              <button class="btn small primary view-details" type="button" data-project-id="himo" data-i18n="projects.viewDetails">Lihat Detail</button>
             </div>
           </div>
         </article>
@@ -246,18 +244,40 @@
         </div>
         <div class="contact-links">
           <!-- Edit your email address here. -->
-          <a href="mailto:your-email@example.com">Email</a>
+          <a href="mailto:mrivaldodestadhiohamzah@gmail.com">Email</a>
           <!-- Edit your GitHub, LinkedIn, and WhatsApp links here. -->
-          <a href="https://github.com/mrivaldodestadhiohamzah" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://github.com/mrivaldodestadhiohamzah" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/mrivaldodhz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://wa.me/6289624574877" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <span class="phone-link">089624574877</span>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-i18n-aria-label="modal.close" aria-label="Tutup">&times;</button>
+      <div class="modal-gallery">
+        <button class="gallery-control prev" type="button" data-gallery-prev aria-label="Previous image">&lsaquo;</button>
+        <figure class="modal-image-frame">
+          <img id="modal-image" src="" alt="" />
+        </figure>
+        <button class="gallery-control next" type="button" data-gallery-next aria-label="Next image">&rsaquo;</button>
+        <div class="modal-thumbnails" id="modal-thumbnails" aria-label="Project image thumbnails"></div>
+      </div>
+      <div class="modal-content">
+        <p class="project-label" id="modal-label"></p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div class="tags modal-tags" id="modal-tags"></div>
+        <div class="project-actions modal-actions" id="modal-actions"></div>
+      </div>
+    </section>
+  </div>
+
   <footer class="site-footer">
-    <p data-i18n="footer.text">© 2026 Portfolio M Rivaldo Destadhio Hamzah. Semua Hak Dilindungi.</p>
+    <p data-i18n="footer.text">&copy; 2026 Portfolio M Rivaldo Destadhio Hamzah. Semua Hak Dilindungi.</p>
   </footer>
 
   <script src="script.js"></script>

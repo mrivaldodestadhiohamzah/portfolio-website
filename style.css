@@ -37,6 +37,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -433,16 +437,26 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 26px;
 }
 
 .project-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.075);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.clickable-project {
+  cursor: pointer;
+}
+
+.clickable-project:focus-visible {
+  outline: 3px solid rgba(45, 212, 191, 0.78);
+  outline-offset: 4px;
 }
 
 .project-card:hover {
@@ -459,14 +473,23 @@ h3 {
 }
 
 .project-media {
-  min-height: 280px;
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
   background: rgba(2, 6, 23, 0.42);
 }
 
 .project-media > img {
   height: 100%;
-  min-height: 280px;
+  min-height: 320px;
   object-fit: cover;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.clickable-project:hover .project-media > img,
+.clickable-project:hover .gallery img {
+  transform: scale(1.035);
+  filter: saturate(1.08) contrast(1.04);
 }
 
 .gallery {
@@ -481,11 +504,12 @@ h3 {
   border-radius: 6px;
   object-fit: cover;
   background: #0f172a;
+  transition: transform 260ms ease, filter 260ms ease;
 }
 
 .nerva-gallery {
   grid-template-columns: 1.3fr 1fr 1fr;
-  grid-template-rows: repeat(2, minmax(150px, 1fr));
+  grid-template-rows: repeat(2, minmax(170px, 1fr));
 }
 
 .nerva-gallery img:first-child {
@@ -494,6 +518,32 @@ h3 {
 
 .himo-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.image-overlay {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  background: rgba(7, 17, 31, 0.82);
+  color: white;
+  font-size: 0.86rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+.clickable-project:hover .image-overlay,
+.clickable-project:focus-visible .image-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-content {
@@ -548,6 +598,11 @@ h3 {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: auto;
+}
+
+.project-actions .btn,
+.project-actions button {
+  cursor: pointer;
 }
 
 .wide-card {
@@ -612,9 +667,208 @@ h3 {
   transition: transform 180ms ease, background 180ms ease;
 }
 
-.contact-links a:hover {
+.contact-links a:hover,
+.phone-link:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.14);
+}
+
+.phone-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.75fr);
+  width: min(1120px, 100%);
+  max-height: min(86vh, 860px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(13, 27, 47, 0.98), rgba(8, 16, 29, 0.98));
+  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.5);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 180ms ease;
+}
+
+.modal-backdrop.open .project-modal {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  background: rgba(2, 6, 23, 0.72);
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.modal-close:hover {
+  transform: translateY(-1px);
+  background: rgba(124, 92, 255, 0.72);
+}
+
+.modal-gallery {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 14px;
+  min-height: 580px;
+  padding: 22px;
+  background: rgba(2, 6, 23, 0.42);
+}
+
+.modal-image-frame {
+  display: grid;
+  min-height: 0;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #06101f;
+}
+
+.modal-image-frame img {
+  width: 100%;
+  height: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+}
+
+.gallery-control {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  background: rgba(7, 17, 31, 0.78);
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 180ms ease, opacity 180ms ease;
+}
+
+.gallery-control:hover {
+  background: rgba(124, 92, 255, 0.82);
+}
+
+.gallery-control[hidden] {
+  display: none;
+}
+
+.gallery-control.prev {
+  left: 32px;
+}
+
+.gallery-control.next {
+  right: 32px;
+}
+
+.modal-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.modal-thumbnails button {
+  flex: 0 0 86px;
+  height: 58px;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.64;
+  transition: opacity 180ms ease, border-color 180ms ease;
+}
+
+.modal-thumbnails button.active,
+.modal-thumbnails button:hover {
+  border-color: var(--accent-2);
+  opacity: 1;
+}
+
+.modal-thumbnails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  padding: 40px 32px 32px;
+}
+
+.modal-content h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.modal-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.modal-tags {
+  margin-top: 4px;
+}
+
+.modal-actions {
+  margin-top: 8px;
 }
 
 .site-footer {
@@ -633,7 +887,8 @@ h3 {
   .featured-project,
   .wide-card,
   .about-grid,
-  .contact-card {
+  .contact-card,
+  .project-modal {
     grid-template-columns: 1fr;
   }
 
@@ -652,6 +907,19 @@ h3 {
 
   .contact-links {
     justify-content: flex-start;
+  }
+
+  .project-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-gallery {
+    min-height: 420px;
+  }
+
+  .modal-content {
+    overflow: visible;
   }
 }
 
@@ -740,6 +1008,47 @@ h3 {
     min-height: 220px;
   }
 
+  .image-overlay {
+    opacity: 1;
+    transform: none;
+  }
+
+  .modal-backdrop {
+    padding: 10px;
+  }
+
+  .project-modal {
+    width: 100%;
+    max-height: 92vh;
+  }
+
+  .modal-gallery {
+    min-height: 320px;
+    padding: 14px;
+  }
+
+  .modal-image-frame img {
+    max-height: 42vh;
+  }
+
+  .gallery-control {
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
+
+  .gallery-control.prev {
+    left: 22px;
+  }
+
+  .gallery-control.next {
+    right: 22px;
+  }
+
+  .modal-content {
+    padding: 24px 18px 22px;
+  }
+
   .floating-card {
     position: relative;
     right: auto;
@@ -763,6 +1072,10 @@ h3 {
   }
 
   .contact-links a {
+    width: 100%;
+  }
+
+  .phone-link {
     width: 100%;
   }
 }

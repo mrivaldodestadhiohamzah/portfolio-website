@@ -1,27 +1,51 @@
 # M Rivaldo Destadhio Hamzah Portfolio Website
 
-This is a modern, responsive, frontend-only portfolio website for **M Rivaldo Destadhio Hamzah**. It is designed to showcase web developer and fullstack developer projects, with a strong project section, Indonesian/English language switcher, and GitHub Pages ready deployment.
+This is a modern, responsive, frontend-only portfolio website for **M Rivaldo Destadhio Hamzah**. It showcases web developer and fullstack developer projects with a bilingual Indonesian/English interface, clickable project cards, and responsive project detail modals.
+
+## Portfolio Projects
+
+The portfolio displays four projects:
+
+- **Notes Studio**: active Live Demo and Source Code links.
+- **StoryNest**: active Live Demo and Source Code links.
+- **HIMO / Hidden Mood**: project showcase only, without Live Demo and Source Code buttons.
+- **NERVA**: project showcase only, without Live Demo and Source Code buttons.
+
+All project cards can be clicked to view detailed images, project descriptions, and technology stacks in a modal/lightbox. Projects with multiple screenshots include gallery navigation and thumbnails.
 
 ## Project Structure
 
 ```text
 portfolio-website/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets/
-    ├── notes.png
-    ├── StoryNest.png
-    ├── sebelum.png
-    ├── sesudah.png
-    ├── akunhasil.png
-    ├── moodc.png
-    ├── history.png
-    ├── dashboard.png
-    ├── result.png
-    └── interface.png
+|-- index.html
+|-- style.css
+|-- script.js
+|-- README.md
+`-- assets/
+    |-- notes.png
+    |-- StoryNest.png
+    |-- sebelum.png
+    |-- sesudah.png
+    |-- akunhasil.png
+    |-- moodc.png
+    |-- history.png
+    |-- dashboard.png
+    |-- result.png
+    `-- interface.png
 ```
+
+## Main Features
+
+- Static website compatible with GitHub Pages.
+- No backend, database, login system, or server-side routing.
+- Responsive layout for desktop, tablet, and mobile.
+- Indonesian and English language switcher with `localStorage`.
+- Clickable project cards with modal/lightbox details.
+- Larger project image preview with gallery navigation.
+- Keyboard support for modals:
+  - `Escape` closes the modal.
+  - `ArrowLeft` and `ArrowRight` change images.
+- Recruiter-ready contact section.
 
 ## How To Edit
 
@@ -33,11 +57,22 @@ Open `index.html` and search for:
 M Rivaldo Destadhio Hamzah
 ```
 
-You can change the name in the hero section, about section, contact section, and footer. Also update this `README.md` if needed.
+Update the hero, about, contact, and footer text if needed.
 
-### Edit Project Descriptions
+### Edit Project Data
 
-Open `script.js`. The project text is inside the `translations` object for both languages:
+Open `script.js`. Project data is managed in the `projects` object:
+
+```js
+const projects = {
+  notes: {},
+  story: {},
+  himo: {},
+  nerva: {}
+};
+```
+
+Project descriptions are managed inside the `translations` object for both languages:
 
 ```js
 project.notes.description
@@ -46,48 +81,55 @@ project.himo.description
 project.nerva.description
 ```
 
-Edit the Indonesian text inside `id` and the English text inside `en`.
-
 ### Change Image Paths
 
-Open `index.html` and search for image tags like:
+Open `index.html` for card preview images and `script.js` for modal gallery images. Change paths such as:
 
 ```html
-<img src="assets/notes.png" alt="Notes Studio project screenshot" />
+assets/notes.png
 ```
 
-If your image extension is different, change the file path. Example:
+If your file extension changes, update the path. Example:
 
 ```html
-<img src="assets/notes.jpg" alt="Notes Studio project screenshot" />
+assets/notes.jpg
 ```
 
-All image paths are relative so they work on GitHub Pages.
+All paths are relative, so they work on GitHub Pages.
 
-### Edit Social And Contact Links
+### Edit Contact Links
 
-Open `index.html` and search for the contact section. Replace the placeholder links:
+The contact links are in `index.html`:
 
-```html
-mailto:your-email@example.com
-https://github.com/mrivaldodestadhiohamzah
-#
-```
+- Email: `mailto:mrivaldodestadhiohamzah@gmail.com`
+- GitHub: `https://github.com/mrivaldodestadhiohamzah`
+- LinkedIn: `https://www.linkedin.com/in/mrivaldodhz/`
+- WhatsApp: `https://wa.me/6289624574877`
+- Phone display: `089624574877`
 
-Use your real email, LinkedIn URL, WhatsApp URL, and project source code URLs.
+### Edit Live Demo And Source Code Links
+
+Notes Studio and StoryNest links are in both `index.html` and `script.js`.
+
+HIMO and NERVA intentionally do not show Live Demo or Source Code buttons.
 
 ## How To Open Locally
 
-Because this is a static website, you can open it directly:
+You can open the website directly:
 
 1. Open the `portfolio-website` folder.
 2. Double-click `index.html`.
-3. The website will open in your browser.
 
-You can also use a simple local server if you prefer:
+You can also run a local static server:
 
 ```bash
-npx serve .
+python -m http.server 8099
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8099/
 ```
 
 ## GitHub Push Instructions
@@ -95,23 +137,24 @@ npx serve .
 Run these commands inside the `portfolio-website` folder:
 
 ```bash
-git init
 git add .
-git commit -m "Initial portfolio website"
-git remote add origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
+git commit -m "Improve portfolio project modal showcase"
 git branch -M main
+git remote set-url origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
 git push -u origin main
 ```
 
-Before running `git remote add origin`, create a new GitHub repository named:
+If the remote does not exist yet, use:
 
-```text
-portfolio-website
+```bash
+git remote add origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
 ```
 
 ## GitHub Pages Deployment
 
-1. Open the repository on GitHub.
+This website is compatible with GitHub Pages.
+
+1. Open the `portfolio-website` repository on GitHub.
 2. Go to **Settings**.
 3. Open **Pages**.
 4. Under **Build and deployment**, choose:
@@ -120,21 +163,14 @@ portfolio-website
    - Folder: **/root**
 5. Click **Save**.
 
-Your website will be available at:
+Expected live portfolio URL:
 
 ```text
 https://mrivaldodestadhiohamzah.github.io/portfolio-website/
 ```
 
-If you change the repository name, the GitHub Pages URL will follow this format:
+If the repository name changes, the URL format becomes:
 
 ```text
 https://mrivaldodestadhiohamzah.github.io/REPOSITORY-NAME/
 ```
-
-## Notes
-
-- This website uses only HTML, CSS, and JavaScript.
-- There is no backend, database, login system, or server-side code.
-- The language switcher saves the selected language in `localStorage`.
-- The website is ready to upload directly to GitHub Pages.
