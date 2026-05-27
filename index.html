@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website M Rivaldo Destadhio Hamzah, web developer and fullstack developer." />
+  <title>M Rivaldo Destadhio Hamzah | Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Edit your name/brand text here if needed. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Go to home">
+        <span class="brand-mark">R</span>
+        <span class="brand-text">Rivaldo.dev</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <ul class="nav-links">
+          <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
+          <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Project</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+        </ul>
+
+        <div class="language-switch" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="id">ID</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">M Rivaldo Destadhio Hamzah</p>
+        <h1 data-i18n="hero.title">Halo, saya seorang Web Developer</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Saya membangun website modern, responsif, dan fungsional untuk berbagai kebutuhan digital.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects" data-i18n="hero.projectsButton">Lihat Project</a>
+          <a class="btn secondary" href="#contact" data-i18n="hero.contactButton">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Portfolio interface preview">
+        <div class="preview-window">
+          <div class="window-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-line short"></div>
+            <div class="preview-line"></div>
+            <div class="preview-grid">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="preview-console">
+              <code>const developer = "M Rivaldo";</code>
+              <code>build("responsive portfolio");</code>
+              <code>deploy("GitHub Pages");</code>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card">
+          <strong>4+</strong>
+          <span data-i18n="hero.projectMetric">Project showcase</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="about.eyebrow">Tentang Saya</p>
+        <h2 data-i18n="about.title">Membangun pengalaman web yang rapi, cepat, dan mudah digunakan.</h2>
+      </div>
+      <div class="about-grid">
+        <p data-i18n="about.body">
+          Saya M Rivaldo Destadhio Hamzah, seorang web developer yang tertarik pada pengembangan frontend dan fullstack. Saya telah membangun beberapa project seperti aplikasi manajemen catatan, aplikasi penulisan cerita, sistem pemantauan kesehatan mental, serta pengembangan sistem mental wellness dengan DASS-21 dan fitur analisis.
+        </p>
+        <div class="about-highlights">
+          <div>
+            <span>Frontend</span>
+            <strong>Responsive UI</strong>
+          </div>
+          <div>
+            <span>Deployment</span>
+            <strong>GitHub Pages</strong>
+          </div>
+          <div>
+            <span>Focus</span>
+            <strong>Clean UX</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading centered">
+        <p class="eyebrow" data-i18n="projects.eyebrow">Project Pilihan</p>
+        <h2 data-i18n="projects.title">Project yang menunjukkan kemampuan saya membangun produk digital.</h2>
+      </div>
+
+      <div class="featured-project project-card">
+        <div class="project-media gallery nerva-gallery">
+          <!-- Change NERVA image paths here if your extensions or filenames are different. -->
+          <img src="assets/moodc.png" alt="NERVA mood check screen" />
+          <img src="assets/dashboard.png" alt="NERVA dashboard screen" />
+          <img src="assets/history.png" alt="NERVA history screen" />
+          <img src="assets/result.png" alt="NERVA result screen" />
+          <img src="assets/interface.png" alt="NERVA interface screen" />
+        </div>
+        <div class="project-content">
+          <span class="project-label" data-i18n="project.nerva.label">Featured Project</span>
+          <h3 data-i18n="project.nerva.title">NERVA</h3>
+          <p data-i18n="project.nerva.description">
+            NERVA adalah versi pengembangan dari HIMO. NERVA merupakan platform web mental wellness yang menggabungkan hasil kuesioner DASS-21 dan analisis teks curhat untuk memantau tingkat stres pengguna.
+          </p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>DASS-21</span><span>Dashboard UI</span>
+          </div>
+          <div class="project-actions">
+            <!-- Replace # with the real NERVA live demo link later. -->
+            <a class="btn small primary" href="#" data-i18n="projects.liveDemo">Live Demo</a>
+            <!-- Replace # with the real NERVA source code link later. -->
+            <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-media">
+            <!-- Change Notes Studio image path here if needed. -->
+            <img src="assets/notes.png" alt="Notes Studio project screenshot" />
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="project.notes.title">Notes Studio</h3>
+            <p data-i18n="project.notes.description">
+              Notes Studio adalah aplikasi manajemen catatan berbasis local-first yang memungkinkan pengguna membuat, mengedit, mengelola, mencari, menyematkan, mengarsipkan, mengimpor, dan mengekspor catatan.
+            </p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Local Storage</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn small primary" href="https://mrivaldodestadhiohamzah.github.io/NoteStudio/" target="_blank" rel="noopener" data-i18n="projects.liveDemo">Live Demo</a>
+              <!-- Replace # with the real Notes Studio source code link later. -->
+              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <!-- Change StoryNest image path here if needed. -->
+            <img src="assets/StoryNest.png" alt="StoryNest project screenshot" />
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="project.story.title">StoryNest</h3>
+            <p data-i18n="project.story.description">
+              StoryNest adalah aplikasi web untuk menulis, menyimpan, mengelola, dan menampilkan cerita pendek dengan tampilan bersih dan konsep peta visual.
+            </p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Responsive UI</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn small primary" href="https://mrivaldodestadhiohamzah.github.io/StoryNest/" target="_blank" rel="noopener" data-i18n="projects.liveDemo">Live Demo</a>
+              <!-- Replace # with the real StoryNest source code link later. -->
+              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card wide-card">
+          <div class="project-media gallery himo-gallery">
+            <!-- Change HIMO image paths here if needed. -->
+            <img src="assets/sebelum.png" alt="HIMO input screen" />
+            <img src="assets/sesudah.png" alt="HIMO result screen" />
+            <img src="assets/akunhasil.png" alt="HIMO account result screen" />
+          </div>
+          <div class="project-content">
+            <span class="project-label muted" data-i18n="project.himo.label">Earlier version before NERVA</span>
+            <h3 data-i18n="project.himo.title">HIMO / Hidden Mood</h3>
+            <p data-i18n="project.himo.description">
+              HIMO atau Hidden Mood adalah sistem awal yang berfokus pada pemantauan mood dan tingkat stres pengguna. Project ini menjadi dasar pengembangan untuk NERVA.
+            </p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>ML Concept</span><span>UI/UX Design</span>
+            </div>
+            <div class="project-actions">
+              <!-- Replace # with the real HIMO live demo link later. -->
+              <a class="btn small primary" href="#" data-i18n="projects.liveDemo">Live Demo</a>
+              <!-- Replace # with the real HIMO source code link later. -->
+              <a class="btn small ghost" href="#" data-i18n="projects.sourceCode">Source Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="skills.eyebrow">Keahlian</p>
+        <h2 data-i18n="skills.title">Teknologi dan area yang saya gunakan untuk membangun website.</h2>
+      </div>
+      <div class="skills-grid" aria-label="Skill list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>UI/UX Design</span>
+        <span>Frontend Development</span>
+        <span>Responsive Design</span>
+        <span>Local Storage</span>
+        <span>GitHub Pages</span>
+        <span>Web Deployment</span>
+        <span>Machine Learning Integration Concept</span>
+        <span>Dashboard Design</span>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontak</p>
+          <h2 data-i18n="contact.title">Mari terhubung dan diskusikan peluang kerja atau kolaborasi.</h2>
+          <p data-i18n="contact.body">
+            Saya terbuka untuk kesempatan sebagai web developer, frontend developer, atau fullstack developer.
+          </p>
+        </div>
+        <div class="contact-links">
+          <!-- Edit your email address here. -->
+          <a href="mailto:your-email@example.com">Email</a>
+          <!-- Edit your GitHub, LinkedIn, and WhatsApp links here. -->
+          <a href="https://github.com/mrivaldodestadhiohamzah" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">© 2026 Portfolio M Rivaldo Destadhio Hamzah. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
