@@ -1,8 +1,5 @@
 :root {
-  --bg: #07111f;
-  --bg-soft: #0d1b2f;
   --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.12);
   --text: #f8fafc;
   --muted: #a8b3c7;
   --line: rgba(255, 255, 255, 0.12);

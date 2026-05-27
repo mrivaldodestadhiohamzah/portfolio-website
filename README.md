@@ -1,19 +1,58 @@
-# M Rivaldo Destadhio Hamzah Portfolio Website
+# M Rivaldo Destadhio Hamzah Portfolio
 
-This is a modern, responsive, frontend-only portfolio website for **M Rivaldo Destadhio Hamzah**. It showcases web developer and fullstack developer projects with a bilingual Indonesian/English interface, clickable project cards, and responsive project detail modals.
+This is my personal portfolio website for showcasing several web development projects I have worked on. The site includes project previews, detailed image modals, live demo links where available, source code links where available, and a simple Indonesian/English language switcher.
 
-## Portfolio Projects
+Live portfolio: <https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 
-The portfolio displays four projects:
+## Features
 
-- **Notes Studio**: active Live Demo and Source Code links.
-- **StoryNest**: active Live Demo and Source Code links.
-- **HIMO / Hidden Mood**: project showcase only, without Live Demo and Source Code buttons.
-- **NERVA**: project showcase only, without Live Demo and Source Code buttons.
+- Responsive portfolio layout for desktop, tablet, and mobile.
+- Bilingual interface in Indonesian and English.
+- Clickable project cards with modal/lightbox details.
+- Image gallery navigation for projects with multiple screenshots.
+- Live demo and source code links for selected projects.
+- Static frontend-only setup, ready for GitHub Pages.
 
-All project cards can be clicked to view detailed images, project descriptions, and technology stacks in a modal/lightbox. Projects with multiple screenshots include gallery navigation and thumbnails.
+## Tech Stack
 
-## Project Structure
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## Projects
+
+### Notes Studio
+
+Notes Studio is a web-based notes application for creating, editing, searching, pinning, archiving, importing, and exporting notes. It uses browser local storage, so it can run without a backend.
+
+- Live Demo: <https://mrivaldodestadhiohamzah.github.io/NoteStudio/>
+- Source Code: <https://github.com/mrivaldodestadhiohamzah/NoteStudio>
+- Tech: HTML, CSS, JavaScript, React, Local Storage, Responsive UI
+
+### StoryNest
+
+StoryNest is a web application for writing and managing short stories. It includes a story list, a writing form, and a simple interface to help users organize their stories more easily.
+
+- Live Demo: <https://mrivaldodestadhiohamzah.github.io/StoryNest/>
+- Source Code: <https://github.com/mrivaldodestadhiohamzah/StoryNest>
+- Tech: HTML, CSS, JavaScript, React, Local Storage, Responsive Design
+
+### HIMO / Hidden Mood
+
+HIMO or Hidden Mood is an early project designed to help users record their mood condition and view simple analysis results. This project became the foundation for a more complete system.
+
+- Showcase only
+- Tech: HTML, CSS, JavaScript, UI/UX Design, Machine Learning Integration Concept
+
+### NERVA
+
+NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations.
+
+- Showcase only
+- Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21 Questionnaire, Dashboard UI, Data Visualization Concept, Machine Learning Integration Concept
+
+## Folder Structure
 
 ```text
 portfolio-website/
@@ -21,106 +60,23 @@ portfolio-website/
 |-- style.css
 |-- script.js
 |-- README.md
+|-- .gitignore
 `-- assets/
     |-- notes.png
-    |-- StoryNest.png
-    |-- sebelum.png
-    |-- sesudah.png
-    |-- akunhasil.png
-    |-- moodc.png
-    |-- history.png
-    |-- dashboard.png
-    |-- result.png
-    `-- interface.png
+    |-- storynest.png
+    |-- himo-before.png
+    |-- himo-after.png
+    |-- himo-result.png
+    |-- nerva-mood.png
+    |-- nerva-history.png
+    |-- nerva-dashboard.png
+    |-- nerva-result.png
+    `-- nerva-interface.png
 ```
 
-## Main Features
+## Run Locally
 
-- Static website compatible with GitHub Pages.
-- No backend, database, login system, or server-side routing.
-- Responsive layout for desktop, tablet, and mobile.
-- Indonesian and English language switcher with `localStorage`.
-- Clickable project cards with modal/lightbox details.
-- Larger project image preview with gallery navigation.
-- Keyboard support for modals:
-  - `Escape` closes the modal.
-  - `ArrowLeft` and `ArrowRight` change images.
-- Recruiter-ready contact section.
-
-## How To Edit
-
-### Edit Your Name
-
-Open `index.html` and search for:
-
-```html
-M Rivaldo Destadhio Hamzah
-```
-
-Update the hero, about, contact, and footer text if needed.
-
-### Edit Project Data
-
-Open `script.js`. Project data is managed in the `projects` object:
-
-```js
-const projects = {
-  notes: {},
-  story: {},
-  himo: {},
-  nerva: {}
-};
-```
-
-Project descriptions are managed inside the `translations` object for both languages:
-
-```js
-project.notes.description
-project.story.description
-project.himo.description
-project.nerva.description
-```
-
-### Change Image Paths
-
-Open `index.html` for card preview images and `script.js` for modal gallery images. Change paths such as:
-
-```html
-assets/notes.png
-```
-
-If your file extension changes, update the path. Example:
-
-```html
-assets/notes.jpg
-```
-
-All paths are relative, so they work on GitHub Pages.
-
-### Edit Contact Links
-
-The contact links are in `index.html`:
-
-- Email: `mailto:mrivaldodestadhiohamzah@gmail.com`
-- GitHub: `https://github.com/mrivaldodestadhiohamzah`
-- LinkedIn: `https://www.linkedin.com/in/mrivaldodhz/`
-- WhatsApp: `https://wa.me/6289624574877`
-- Phone display: `089624574877`
-
-### Edit Live Demo And Source Code Links
-
-Notes Studio and StoryNest links are in both `index.html` and `script.js`.
-
-HIMO and NERVA intentionally do not show Live Demo or Source Code buttons.
-
-## How To Open Locally
-
-You can open the website directly:
-
-1. Open the `portfolio-website` folder.
-2. Double-click `index.html`.
-
-You can also run a local static server:
+Open `index.html` directly in a browser, or run a small local server from the project folder:
 
 ```bash
 python -m http.server 8099
@@ -132,45 +88,27 @@ Then open:
 http://127.0.0.1:8099/
 ```
 
-## GitHub Push Instructions
+## Deploy To GitHub Pages
 
-Run these commands inside the `portfolio-website` folder:
+This repository is deployed from the `main` branch.
 
-```bash
-git add .
-git commit -m "Improve portfolio project modal showcase"
-git branch -M main
-git remote set-url origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
-git push -u origin main
-```
+1. Push the latest code to GitHub.
+2. Open the repository settings.
+3. Go to **Pages**.
+4. Set the source to **Deploy from a branch**.
+5. Choose branch **main** and folder **/root**.
+6. Save the settings.
 
-If the remote does not exist yet, use:
-
-```bash
-git remote add origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
-```
-
-## GitHub Pages Deployment
-
-This website is compatible with GitHub Pages.
-
-1. Open the `portfolio-website` repository on GitHub.
-2. Go to **Settings**.
-3. Open **Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/root**
-5. Click **Save**.
-
-Expected live portfolio URL:
+The deployed URL is:
 
 ```text
 https://mrivaldodestadhiohamzah.github.io/portfolio-website/
 ```
 
-If the repository name changes, the URL format becomes:
+## Contact
 
-```text
-https://mrivaldodestadhiohamzah.github.io/REPOSITORY-NAME/
-```
+- Email: <mrivaldodestadhiohamzah@gmail.com>
+- GitHub: <https://github.com/mrivaldodestadhiohamzah>
+- LinkedIn: <https://www.linkedin.com/in/mrivaldodhz/>
+- WhatsApp: <https://wa.me/6289624574877>
+- Phone: 089624574877
