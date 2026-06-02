@@ -118,7 +118,10 @@
 
       <article class="featured-project project-card clickable-project" data-project-id="nerva" tabindex="0" role="button" aria-label="Open NERVA project details">
         <div class="project-media gallery nerva-gallery">
-          <img src="assets/nerva-mood.png" alt="NERVA mood check screen" />
+          <video class="project-video-preview" autoplay muted loop playsinline poster="assets/nerva-interface.png" aria-label="NERVA project video preview">
+            <source src="assets/NervaVID.mp4" type="video/mp4" />
+            NERVA video preview
+          </video>
           <img src="assets/nerva-dashboard.png" alt="NERVA dashboard screen" />
           <img src="assets/nerva-history.png" alt="NERVA history screen" />
           <img src="assets/nerva-result.png" alt="NERVA result screen" />
@@ -255,6 +258,7 @@
         <button class="gallery-control prev" type="button" data-gallery-prev aria-label="Previous image">&lsaquo;</button>
         <figure class="modal-image-frame">
           <img id="modal-image" src="" alt="" />
+          <video id="modal-video" controls autoplay playsinline muted loop poster="assets/nerva-interface.png" hidden></video>
         </figure>
         <button class="gallery-control next" type="button" data-gallery-next aria-label="Next image">&rsaquo;</button>
         <div class="modal-thumbnails" id="modal-thumbnails" aria-label="Project image thumbnails"></div>

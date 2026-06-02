@@ -112,11 +112,17 @@ const projects = {
     descriptionKey: "project.nerva.description",
     labelKey: "project.nerva.label",
     images: [
-      { src: "assets/nerva-mood.png", alt: "NERVA mood check screen" },
-      { src: "assets/nerva-history.png", alt: "NERVA history screen" },
-      { src: "assets/nerva-dashboard.png", alt: "NERVA dashboard screen" },
-      { src: "assets/nerva-result.png", alt: "NERVA result screen" },
-      { src: "assets/nerva-interface.png", alt: "NERVA interface screen" }
+      {
+        type: "video",
+        src: "assets/NervaVID.mp4",
+        poster: "assets/nerva-interface.png",
+        alt: "NERVA project video preview"
+      },
+      { type: "image", src: "assets/nerva-mood.png", alt: "NERVA mood check screen" },
+      { type: "image", src: "assets/nerva-history.png", alt: "NERVA history screen" },
+      { type: "image", src: "assets/nerva-dashboard.png", alt: "NERVA dashboard screen" },
+      { type: "image", src: "assets/nerva-result.png", alt: "NERVA result screen" },
+      { type: "image", src: "assets/nerva-interface.png", alt: "NERVA interface screen" }
     ],
     tech: [
       "React",
@@ -142,6 +148,7 @@ const modal = document.querySelector("#project-modal");
 const modalDialog = modal.querySelector(".project-modal");
 const modalClose = modal.querySelector(".modal-close");
 const modalImage = document.querySelector("#modal-image");
+const modalVideo = document.querySelector("#modal-video");
 const modalLabel = document.querySelector("#modal-label");
 const modalTitle = document.querySelector("#modal-title");
 const modalDescription = document.querySelector("#modal-description");
@@ -194,10 +201,26 @@ function closeMobileMenu() {
   document.body.classList.remove("menu-open");
 }
 
-function renderModalImage(project, imageIndex) {
-  const image = project.images[imageIndex];
-  modalImage.src = image.src;
-  modalImage.alt = image.alt;
+function renderModalMedia(project, imageIndex) {
+  const media = project.images[imageIndex];
+
+  if (media.type === "video") {
+    modalImage.hidden = true;
+    modalImage.removeAttribute("src");
+    modalVideo.hidden = false;
+    modalVideo.poster = media.poster || "";
+    modalVideo.src = media.src;
+    modalVideo.setAttribute("aria-label", media.alt);
+    modalVideo.load();
+    modalVideo.play().catch(() => {});
+  } else {
+    modalVideo.pause();
+    modalVideo.hidden = true;
+    modalVideo.removeAttribute("src");
+    modalImage.hidden = false;
+    modalImage.src = media.src;
+    modalImage.alt = media.alt;
+  }
 
   [...modalThumbnails.children].forEach((button, index) => {
     button.classList.toggle("active", index === imageIndex);
@@ -212,7 +235,7 @@ function changeModalImage(direction) {
   if (project.images.length <= 1) return;
 
   activeImageIndex = (activeImageIndex + direction + project.images.length) % project.images.length;
-  renderModalImage(project, activeImageIndex);
+  renderModalMedia(project, activeImageIndex);
 }
 
 function createModalLink(href, text, variant) {
@@ -257,12 +280,15 @@ function renderModalContent(projectId, imageIndex = 0) {
     button.setAttribute("aria-label", `${t(project.titleKey)} image ${index + 1}`);
     button.addEventListener("click", () => {
       activeImageIndex = index;
-      renderModalImage(project, activeImageIndex);
+      renderModalMedia(project, activeImageIndex);
     });
 
     const thumbnail = document.createElement("img");
-    thumbnail.src = image.src;
+    thumbnail.src = image.type === "video" ? image.poster : image.src;
     thumbnail.alt = image.alt;
+    if (image.type === "video") {
+      button.classList.add("video-thumb");
+    }
     button.appendChild(thumbnail);
     modalThumbnails.appendChild(button);
   });
@@ -272,7 +298,7 @@ function renderModalContent(projectId, imageIndex = 0) {
   nextButton.hidden = !hasMultipleImages;
   modalThumbnails.hidden = !hasMultipleImages;
 
-  renderModalImage(project, activeImageIndex);
+  renderModalMedia(project, activeImageIndex);
 }
 
 function openProjectModal(projectId) {
@@ -284,6 +310,7 @@ function openProjectModal(projectId) {
 }
 
 function closeProjectModal() {
+  modalVideo.pause();
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");

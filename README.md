@@ -10,6 +10,7 @@ Live portfolio: <https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 - Bilingual interface in Indonesian and English.
 - Clickable project cards with modal/lightbox details.
 - Image gallery navigation for projects with multiple screenshots.
+- Video preview for the NERVA project.
 - Live demo and source code links for selected projects.
 - Static frontend-only setup, ready for GitHub Pages.
 
