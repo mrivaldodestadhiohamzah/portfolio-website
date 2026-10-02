@@ -9,6 +9,7 @@ Live portfolio: <https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 - Static HTML, CSS, and JavaScript setup that can be deployed directly to GitHub Pages.
 - Responsive layout for desktop, tablet, and mobile screens.
 - Indonesian and English content with language preference saved in local storage.
+- Downloadable CV in the hero section.
 - Clickable project cards with responsive modal galleries.
 - Keyboard and button navigation for multi-image project showcases.
 - NERVA video preview with a poster image fallback.
@@ -20,6 +21,8 @@ Live portfolio: <https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 
 HireFlow is a recruiting web application for managing candidates, hiring pipelines, jobs, interviews, and candidate context in one workspace. The portfolio uses six screenshots: the landing page, registration screen, dashboard, candidates view, jobs view, and recruitment pipeline.
 
+My contribution covers the landing page and recruiter workspace, including the dashboard, candidate management, jobs, interviews, filters, pipeline, and candidate details. The repository also includes service foundations for ASP.NET Core, EF Core, PostgreSQL, and FastAPI.
+
 - Live Demo: <https://hireflow-zeta-eight.vercel.app/>
 - Source Code: <https://github.com/mrivaldodestadhiohamzah/hireflow>
 - Tech: Next.js, React, TypeScript, Tailwind CSS, ASP.NET Core, FastAPI, PostgreSQL
@@ -27,6 +30,8 @@ HireFlow is a recruiting web application for managing candidates, hiring pipelin
 ### NERVA
 
 NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations. The portfolio presents NERVA as a showcase with a video walkthrough and interface screenshots.
+
+My contribution focused on the interface and the main flows for mood checking, the dashboard, analysis history, and combined results. The project is presented with the technologies documented for the current implementation: React, Tailwind CSS, Express.js, JavaScript, DASS-21, and dashboard/data visualization concepts.
 
 - Showcase only
 - Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21, dashboard UI, data visualization concept
@@ -66,6 +71,7 @@ portfolio-website/
 |-- README.md
 |-- .gitignore
 `-- assets/
+    |-- CV_M.Rivaldo_Destadhio_Hamzah.pdf
     |-- notes.png
     |-- storynest.png
     |-- himo-before.png
@@ -84,6 +90,12 @@ portfolio-website/
     |-- jobs.png
     `-- pipline.png
 ```
+
+## Experience and Education
+
+The portfolio includes factual experience from Dicoding Coding Camp 2026 powered by DBS Foundation, DCN Telkom University, PT Telkom Infrastruktur Indonesia (Infranexia), Telkom Test House, and BPS.
+
+Education: S1 Teknik Telekomunikasi at Universitas Telkom, 2022–2026.
 
 ## Run Locally
 
