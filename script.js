@@ -270,7 +270,7 @@ const projects = {
       { src: "assets/jobs.png", alt: "HireFlow jobs screen" },
       { src: "assets/pipline.png", alt: "HireFlow recruitment pipeline screen" }
     ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ASP.NET Core", "FastAPI", "PostgreSQL"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ASP.NET Core", "EF Core", "FastAPI", "PostgreSQL"],
     liveDemo: "https://hireflow-zeta-eight.vercel.app/",
     sourceCode: "https://github.com/mrivaldodestadhiohamzah/hireflow"
   },
@@ -310,7 +310,7 @@ const projects = {
     titleKey: "project.story.title",
     descriptionKey: "project.story.description",
     images: [{ src: "assets/storynest.png", alt: "StoryNest project screenshot" }],
-    tech: ["HTML", "CSS", "JavaScript", "React", "Local Storage", "Responsive Design"],
+    tech: ["HTML", "CSS", "Vanilla JavaScript", "JavaScript Modules", "Local Storage", "Responsive Design"],
     liveDemo: "https://mrivaldodestadhiohamzah.github.io/StoryNest/",
     sourceCode: "https://github.com/mrivaldodestadhiohamzah/StoryNest"
   },

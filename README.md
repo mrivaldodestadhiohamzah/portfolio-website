@@ -25,7 +25,7 @@ My contribution covers the landing page and recruiter workspace, including the d
 
 - Live Demo: <https://hireflow-zeta-eight.vercel.app/>
 - Source Code: <https://github.com/mrivaldodestadhiohamzah/hireflow>
-- Tech: Next.js, React, TypeScript, Tailwind CSS, ASP.NET Core, FastAPI, PostgreSQL
+- Tech: Next.js, React, TypeScript, Tailwind CSS, ASP.NET Core, EF Core, FastAPI, PostgreSQL
 
 ### NERVA
 
@@ -52,7 +52,7 @@ StoryNest is a web application for writing and managing short stories. It includ
 
 - Live Demo: <https://mrivaldodestadhiohamzah.github.io/StoryNest/>
 - Source Code: <https://github.com/mrivaldodestadhiohamzah/StoryNest>
-- Tech: HTML, CSS, JavaScript, React, Local Storage, Responsive Design
+- Tech: HTML, CSS, Vanilla JavaScript, JavaScript modules, Local Storage, Responsive Design
 
 ### HIMO / Hidden Mood
 
