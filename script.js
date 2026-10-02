@@ -85,13 +85,17 @@ const translations = {
     "project.hireflow.shotCandidates": "Candidates",
     "project.hireflow.shotJobs": "Jobs",
     "project.hireflow.shotPipeline": "Pipeline",
-    "project.nerva.label": "Mental wellness platform",
+    "project.nerva.label": "Aplikasi klasifikasi stres mahasiswa",
     "project.nerva.title": "NERVA",
-    "project.nerva.description": "NERVA adalah pengembangan dari HIMO yang berfokus pada pemantauan stres dan kondisi mental pengguna. Sistem ini menggabungkan kuesioner DASS-21, analisis teks curhat, dashboard, riwayat, hasil analisis, dan rekomendasi video. Project ini dikembangkan menggunakan React, Tailwind CSS, dan Express.js.",
+    "project.nerva.description": "NERVA adalah aplikasi web untuk klasifikasi tingkat stres mahasiswa yang menggabungkan analisis teks jurnal dengan kuesioner DASS-21 untuk memberikan penilaian stres yang lebih kontekstual. Alur utamanya mencakup input jurnal, pengisian DASS-21, dashboard, riwayat, dan visualisasi hasil.",
     "project.nerva.contributionLabel": "Kontribusi saya",
-    "project.nerva.contribution": "Berfokus pada pengembangan antarmuka dan alur utama cek mood, dashboard, riwayat analisis, serta hasil gabungan.",
+    "project.nerva.contribution": "Kontribusi saya mencakup pengembangan website dengan cakupan fullstack, backend, dan implementasi keamanan pada alur input jurnal, cek DASS-21, dashboard, riwayat, serta hasil visualisasi.",
     "project.nerva.implementationLabel": "Implementasi",
-    "project.nerva.implementation": "Alur produk menggabungkan kuesioner DASS-21 dan analisis teks mood ke dalam tampilan dashboard, riwayat, dan hasil analisis.",
+    "project.nerva.implementation": "Implementasi menghubungkan input jurnal dan kuesioner DASS-21 dengan hasil analisis yang ditampilkan melalui dashboard, riwayat, dan visualisasi hasil.",
+    "project.nerva.highlightsLabel": "Sorotan teknis",
+    "project.nerva.highlightJournal": "Analisis teks jurnal",
+    "project.nerva.highlightBackend": "Alur backend dengan Express.js",
+    "project.nerva.highlightResults": "Kuesioner DASS-21 dan visualisasi hasil",
     "project.nerva.videoCaption": "Product walkthrough",
     "project.notes.title": "Notes Studio",
     "project.notes.description": "Notes Studio adalah aplikasi catatan berbasis web yang dibuat untuk membuat, mengedit, mencari, menyematkan, mengarsipkan, mengimpor, dan mengekspor catatan. Project ini menggunakan penyimpanan lokal browser sehingga tetap dapat digunakan tanpa backend.",
@@ -207,13 +211,17 @@ const translations = {
     "project.hireflow.shotCandidates": "Candidates",
     "project.hireflow.shotJobs": "Jobs",
     "project.hireflow.shotPipeline": "Pipeline",
-    "project.nerva.label": "Mental wellness platform",
+    "project.nerva.label": "Student stress classification app",
     "project.nerva.title": "NERVA",
-    "project.nerva.description": "NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations. This project was developed using React, Tailwind CSS, and Express.js.",
+    "project.nerva.description": "NERVA is a student stress classification web application that combines journal text analysis with the DASS-21 questionnaire to provide a more contextual view of stress levels. Its main flows cover journal input, the DASS-21 assessment, dashboard, history, and result visualization.",
     "project.nerva.contributionLabel": "My contribution",
-    "project.nerva.contribution": "Focused on the interface and main flows for mood checking, the dashboard, analysis history, and combined results.",
+    "project.nerva.contribution": "My contribution covered website/fullstack development, backend work, and security implementation across the journal input, DASS-21 check, dashboard, history, and result visualization flows.",
     "project.nerva.implementationLabel": "Implementation",
-    "project.nerva.implementation": "The product flow brings DASS-21 questionnaire results and mood text analysis together across the dashboard, history, and analysis result views.",
+    "project.nerva.implementation": "The implementation connects journal input and the DASS-21 questionnaire to analysis results presented through the dashboard, history, and result visualization views.",
+    "project.nerva.highlightsLabel": "Technical highlights",
+    "project.nerva.highlightJournal": "Journal text analysis",
+    "project.nerva.highlightBackend": "Express.js backend flow",
+    "project.nerva.highlightResults": "DASS-21 questionnaire and result visualization",
     "project.nerva.videoCaption": "Product walkthrough",
     "project.notes.title": "Notes Studio",
     "project.notes.description": "Notes Studio is a web-based notes application for creating, editing, searching, pinning, archiving, importing, and exporting notes. It uses browser local storage, so it can run without a backend.",
@@ -274,6 +282,12 @@ const projects = {
     contributionLabelKey: "project.nerva.contributionLabel",
     implementationKey: "project.nerva.implementation",
     implementationLabelKey: "project.nerva.implementationLabel",
+    highlightsLabelKey: "project.nerva.highlightsLabel",
+    highlightsKeys: [
+      "project.nerva.highlightJournal",
+      "project.nerva.highlightBackend",
+      "project.nerva.highlightResults"
+    ],
     images: [
       { type: "video", src: "assets/NervaVID.mp4", poster: "assets/nerva-interface.png", alt: "NERVA project video preview" },
       { type: "image", src: "assets/nerva-mood.png", alt: "NERVA mood check screen" },
@@ -282,7 +296,7 @@ const projects = {
       { type: "image", src: "assets/nerva-result.png", alt: "NERVA result screen" },
       { type: "image", src: "assets/nerva-interface.png", alt: "NERVA interface screen" }
     ],
-    tech: ["React", "Tailwind CSS", "Express.js", "JavaScript", "DASS-21 Questionnaire", "Dashboard UI", "Data Visualization Concept", "Machine Learning Integration Concept"]
+    tech: ["React", "Tailwind CSS", "Express.js", "JavaScript", "DASS-21 Questionnaire", "Dashboard UI", "Data Visualization"]
   },
   notes: {
     titleKey: "project.notes.title",
@@ -309,7 +323,7 @@ const projects = {
       { src: "assets/himo-after.png", alt: "HIMO analysis result screen" },
       { src: "assets/himo-result.png", alt: "HIMO account result screen" }
     ],
-    tech: ["HTML", "CSS", "JavaScript", "UI/UX Design", "Machine Learning Integration Concept"]
+    tech: ["HTML", "CSS", "JavaScript", "UI/UX Design"]
   }
 };
 
@@ -336,6 +350,9 @@ const modalContribution = document.querySelector("#modal-contribution");
 const modalImplementationBlock = document.querySelector("#modal-implementation-block");
 const modalImplementationLabel = document.querySelector("#modal-implementation-label");
 const modalImplementation = document.querySelector("#modal-implementation");
+const modalHighlightsBlock = document.querySelector("#modal-highlights-block");
+const modalHighlightsLabel = document.querySelector("#modal-highlights-label");
+const modalHighlights = document.querySelector("#modal-highlights");
 const modalThumbnails = document.querySelector("#modal-thumbnails");
 const modalCounter = document.querySelector("#modal-counter");
 const prevButton = document.querySelector("[data-gallery-prev]");
@@ -459,6 +476,14 @@ function renderModalContent(projectId, imageIndex = 0) {
   modalImplementationBlock.hidden = !project.implementationKey;
   modalImplementationLabel.textContent = project.implementationLabelKey ? t(project.implementationLabelKey) : "";
   modalImplementation.textContent = project.implementationKey ? t(project.implementationKey) : "";
+  modalHighlightsBlock.hidden = !project.highlightsKeys?.length;
+  modalHighlightsLabel.textContent = project.highlightsLabelKey ? t(project.highlightsLabelKey) : "";
+  modalHighlights.innerHTML = "";
+  project.highlightsKeys?.forEach((key) => {
+    const item = document.createElement("li");
+    item.textContent = t(key);
+    modalHighlights.appendChild(item);
+  });
 
   modalTags.innerHTML = "";
   project.tech.forEach((technology) => {

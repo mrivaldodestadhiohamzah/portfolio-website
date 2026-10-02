@@ -29,12 +29,14 @@ My contribution covers the landing page and recruiter workspace, including the d
 
 ### NERVA
 
-NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations. The portfolio presents NERVA as a showcase with a video walkthrough and interface screenshots.
+NERVA is a student stress classification web application that combines journal text analysis with the DASS-21 questionnaire to provide a more contextual view of stress levels. The portfolio presents NERVA as a showcase with a video walkthrough and interface screenshots.
 
-My contribution focused on the interface and the main flows for mood checking, the dashboard, analysis history, and combined results. The project is presented with the technologies documented for the current implementation: React, Tailwind CSS, Express.js, JavaScript, DASS-21, and dashboard/data visualization concepts.
+My contribution covered website/fullstack development, backend work, and security implementation across the journal input, DASS-21 check, dashboard, history, and result visualization flows. The project is presented with the current implementation stack: React, Tailwind CSS, Express.js, JavaScript, DASS-21, dashboard UI, and data visualization.
+
+Technical highlights shown in the project detail view include journal text analysis, the Express.js backend flow, and DASS-21-based result visualization.
 
 - Showcase only
-- Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21, dashboard UI, data visualization concept
+- Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21, dashboard UI, data visualization
 
 ### Notes Studio
 
@@ -57,7 +59,7 @@ StoryNest is a web application for writing and managing short stories. It includ
 HIMO or Hidden Mood is an early project designed to help users record their mood condition and view simple analysis results. This project became the foundation for a more complete system.
 
 - Showcase only
-- Tech: HTML, CSS, JavaScript, UI/UX Design, Machine Learning Integration Concept
+- Tech: HTML, CSS, JavaScript, UI/UX Design
 
 HIMO and NERVA are presented as project showcases without Live Demo or Source Code buttons. Every project card can be opened to view its screenshots, explanation, and technology tags.
 
