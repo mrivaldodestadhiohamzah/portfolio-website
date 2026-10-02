@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio website M Rivaldo Destadhio Hamzah, web developer and fullstack developer." />
-  <title>M Rivaldo Destadhio Hamzah | Web Developer Portfolio</title>
+  <meta name="theme-color" content="#0d1720" />
+  <meta name="description" content="Portfolio M. Rivaldo Destadhio Hamzah, Web Developer dan Fullstack Developer." />
+  <title>M. Rivaldo Destadhio Hamzah | Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a href="#home" class="brand" aria-label="Go to home">
-        <span class="brand-mark">R</span>
+        <span class="brand-mark">MR</span>
         <span class="brand-text">Rivaldo.dev</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-panel">
         <span></span>
         <span></span>
         <span></span>
@@ -43,167 +44,203 @@
 
   <main>
     <section class="hero section" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">M Rivaldo Destadhio Hamzah</p>
-        <h1 data-i18n="hero.title">Halo, saya seorang Web Developer</h1>
+      <div class="hero-copy">
+        <p class="hero-kicker">M. Rivaldo Destadhio Hamzah</p>
+        <h1 data-i18n="hero.title">Web Developer / Fullstack Developer</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">
-          Saya membangun website modern, responsif, dan fungsional untuk berbagai kebutuhan digital.
+          Saya membangun antarmuka web dan aplikasi yang terasa jelas digunakan, dari halaman frontend hingga alur produk yang lebih lengkap.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects" data-i18n="hero.projectsButton">Lihat Project</a>
-          <a class="btn secondary" href="#contact" data-i18n="hero.contactButton">Hubungi Saya</a>
+          <a class="btn primary" href="#projects" data-i18n="hero.projectsButton">Lihat project</a>
+          <a class="btn text-button" href="#contact" data-i18n="hero.contactButton">Hubungi saya</a>
+        </div>
+        <div class="hero-meta" aria-label="Professional focus">
+          <span data-i18n="hero.metaLocation">Indonesia</span>
+          <span data-i18n="hero.metaFocus">Frontend · Fullstack</span>
+          <span data-i18n="hero.metaAvailability">Terbuka untuk peluang kerja</span>
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Portfolio interface preview">
-        <div class="preview-window">
-          <div class="window-top">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="preview-body">
-            <div class="preview-line short"></div>
-            <div class="preview-line"></div>
-            <div class="preview-grid">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="preview-console">
-              <code>const developer = "M Rivaldo";</code>
-              <code>build("responsive portfolio");</code>
-              <code>deploy("GitHub Pages");</code>
-            </div>
-          </div>
+      <div class="hero-proof">
+        <div class="hero-proof-top">
+          <span data-i18n="hero.proofLabel">Cuplikan project terbaru</span>
+          <span class="mono">01 / 05</span>
         </div>
-        <div class="floating-card">
-          <strong>4+</strong>
-          <span data-i18n="hero.projectMetric">Project showcase</span>
-        </div>
+        <figure class="hero-preview">
+          <img src="assets/hireflowlanding.png" alt="HireFlow landing page preview" />
+          <figcaption>
+            <span data-i18n="hero.proofCaption">Current focus</span>
+            <strong data-i18n="hero.proofTitle">Product interfaces with a clear next step.</strong>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section about-section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="about.eyebrow">Tentang Saya</p>
-        <h2 data-i18n="about.title">Membangun pengalaman web yang rapi, cepat, dan mudah digunakan.</h2>
+      <div class="section-intro">
+        <p class="section-index">01 / <span data-i18n="about.index">Tentang</span></p>
+        <div>
+          <h2 data-i18n="about.title">Saya suka mengubah kebutuhan yang rumit menjadi pengalaman web yang mudah dipahami.</h2>
+          <p class="section-lead" data-i18n="about.lead">Saya bekerja di area frontend dan fullstack, dengan perhatian pada struktur, responsivitas, dan detail kecil yang membuat produk terasa matang.</p>
+        </div>
       </div>
-      <div class="about-grid">
-        <p data-i18n="about.body">
-          Saya M Rivaldo Destadhio Hamzah, seorang web developer yang tertarik pada pengembangan frontend dan fullstack. Saya telah membangun beberapa project seperti aplikasi manajemen catatan, aplikasi penulisan cerita, sistem pemantauan kesehatan mental, serta pengembangan sistem mental wellness dengan DASS-21 dan fitur analisis.
+      <div class="about-layout">
+        <p class="about-copy" data-i18n="about.body">
+          Saya M. Rivaldo Destadhio Hamzah. Beberapa project yang saya kerjakan mencakup aplikasi catatan, platform cerita, sistem mental wellness, dan recruiting workspace. Saya sedang mencari kesempatan untuk terus berkembang sebagai Web Developer atau Fullstack Developer.
         </p>
-        <div class="about-highlights">
-          <div>
-            <span>Frontend</span>
-            <strong>Responsive UI</strong>
+        <div class="about-notes">
+          <div class="about-note">
+            <span class="mono">01</span>
+            <div>
+              <strong data-i18n="about.noteOneTitle">Frontend yang terukur</strong>
+              <p data-i18n="about.noteOneBody">Komponen rapi, layout responsif, dan state yang mudah dirawat.</p>
+            </div>
           </div>
-          <div>
-            <span>Deployment</span>
-            <strong>GitHub Pages</strong>
+          <div class="about-note">
+            <span class="mono">02</span>
+            <div>
+              <strong data-i18n="about.noteTwoTitle">Fullstack dengan konteks</strong>
+              <p data-i18n="about.noteTwoBody">Memahami bagaimana UI terhubung dengan API, data, dan kebutuhan pengguna.</p>
+            </div>
           </div>
-          <div>
-            <span>Focus</span>
-            <strong>Clean UX</strong>
+          <div class="about-note">
+            <span class="mono">03</span>
+            <div>
+              <strong data-i18n="about.noteThreeTitle">Belajar lewat project nyata</strong>
+              <p data-i18n="about.noteThreeBody">Setiap project menjadi ruang untuk menguji ide dan memperbaiki cara kerja.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section projects-section" id="projects">
-      <div class="section-heading centered">
-        <p class="eyebrow" data-i18n="projects.eyebrow">Project Pilihan</p>
-        <h2 data-i18n="projects.title">Project yang menunjukkan kemampuan saya membangun produk digital.</h2>
+      <div class="section-intro projects-intro">
+        <p class="section-index">02 / <span data-i18n="projects.index">Project</span></p>
+        <div>
+          <h2 data-i18n="projects.title">Project adalah cara terbaik untuk melihat bagaimana saya bekerja.</h2>
+          <p class="section-lead" data-i18n="projects.lead">Klik project untuk melihat screenshot, penjelasan, dan teknologi yang digunakan.</p>
+        </div>
       </div>
 
-      <article class="featured-project project-card clickable-project" data-project-id="nerva" tabindex="0" role="button" aria-label="Open NERVA project details">
-        <div class="project-media gallery nerva-gallery">
-          <video class="project-video-preview" autoplay muted loop playsinline poster="assets/nerva-interface.png" aria-label="NERVA project video preview">
-            <source src="assets/NervaVID.mp4" type="video/mp4" />
-            NERVA video preview
-          </video>
-          <img src="assets/nerva-dashboard.png" alt="NERVA dashboard screen" />
-          <img src="assets/nerva-history.png" alt="NERVA history screen" />
-          <img src="assets/nerva-result.png" alt="NERVA result screen" />
-          <img src="assets/nerva-interface.png" alt="NERVA interface screen" />
+      <article class="project-card featured-project clickable-project" data-project-id="hireflow" tabindex="0" role="button" data-i18n-aria-label="aria.project.hireflow" aria-label="Open HireFlow project details">
+        <div class="project-media hireflow-media">
+          <figure class="hireflow-primary">
+            <img src="assets/hireflowlanding.png" alt="HireFlow landing page" />
+            <figcaption data-i18n="project.hireflow.primaryCaption">Landing page · product overview</figcaption>
+          </figure>
+          <div class="hireflow-support" aria-label="HireFlow screenshot gallery">
+            <figure><img src="assets/hireflowregis.png" alt="HireFlow registration and authentication screen" /><figcaption data-i18n="project.hireflow.shotRegistration">Registration</figcaption></figure>
+            <figure><img src="assets/hiredash.png" alt="HireFlow dashboard screen" /><figcaption data-i18n="project.hireflow.shotDashboard">Dashboard</figcaption></figure>
+            <figure><img src="assets/candidates.png" alt="HireFlow candidates screen" /><figcaption data-i18n="project.hireflow.shotCandidates">Candidates</figcaption></figure>
+            <figure><img src="assets/jobs.png" alt="HireFlow jobs screen" /><figcaption data-i18n="project.hireflow.shotJobs">Jobs</figcaption></figure>
+            <figure><img src="assets/pipline.png" alt="HireFlow recruitment pipeline screen" /><figcaption data-i18n="project.hireflow.shotPipeline">Pipeline</figcaption></figure>
+          </div>
           <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
         </div>
-        <div class="project-content">
-          <span class="project-label" data-i18n="project.nerva.label">Featured Project</span>
-          <h3 data-i18n="project.nerva.title">NERVA</h3>
-          <p data-i18n="project.nerva.description">
-            NERVA adalah pengembangan dari HIMO yang berfokus pada pemantauan stres dan kondisi mental pengguna.
-          </p>
+        <div class="project-content featured-content">
+          <div class="project-heading-row">
+            <span class="project-number mono">01</span>
+            <span class="project-label" data-i18n="project.hireflow.label">Featured work</span>
+          </div>
+          <h3 data-i18n="project.hireflow.title">HireFlow</h3>
+          <p data-i18n="project.hireflow.description">HireFlow adalah aplikasi web untuk membantu proses rekrutmen melalui pengelolaan kandidat, pipeline, lowongan, interview, dan candidate context dalam satu workspace.</p>
           <div class="tags">
-            <span>React</span><span>Tailwind CSS</span><span>Express.js</span><span>DASS-21</span><span>Dashboard UI</span>
+            <span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>ASP.NET Core</span><span>FastAPI</span>
           </div>
           <div class="project-actions">
-            <button class="btn small primary view-details" type="button" data-project-id="nerva" data-i18n="projects.viewDetails">Lihat Detail</button>
+            <button class="btn small primary view-details" type="button" data-project-id="hireflow" data-i18n="projects.viewDetails">Lihat detail</button>
+            <a class="btn small outline" href="https://hireflow-zeta-eight.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Live demo</a>
+            <a class="btn small outline" href="https://github.com/mrivaldodestadhiohamzah/hireflow" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source code</a>
           </div>
         </div>
       </article>
 
-      <div class="project-grid">
-        <article class="project-card clickable-project" data-project-id="notes" tabindex="0" role="button" aria-label="Open Notes Studio project details">
-          <div class="project-media">
+      <article class="project-card project-card-wide clickable-project" data-project-id="nerva" tabindex="0" role="button" data-i18n-aria-label="aria.project.nerva" aria-label="Open NERVA project details">
+        <div class="project-media nerva-media">
+          <div class="nerva-primary">
+            <video class="project-video-preview" autoplay muted loop playsinline poster="assets/nerva-interface.png" aria-label="NERVA project video preview">
+              <source src="assets/NervaVID.mp4" type="video/mp4" />
+              NERVA video preview
+            </video>
+            <span class="media-caption" data-i18n="project.nerva.videoCaption">Product walkthrough</span>
+          </div>
+          <div class="nerva-stills">
+            <img src="assets/nerva-dashboard.png" alt="NERVA dashboard screen" />
+            <img src="assets/nerva-result.png" alt="NERVA result screen" />
+          </div>
+          <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
+        </div>
+        <div class="project-content">
+          <div class="project-heading-row">
+            <span class="project-number mono">02</span>
+            <span class="project-label" data-i18n="project.nerva.label">Mental wellness platform</span>
+          </div>
+          <h3 data-i18n="project.nerva.title">NERVA</h3>
+          <p data-i18n="project.nerva.description">NERVA adalah pengembangan dari HIMO yang berfokus pada pemantauan stres dan kondisi mental pengguna. Sistem ini menggabungkan kuesioner DASS-21, analisis teks curhat, dashboard, riwayat, hasil analisis, dan rekomendasi video. Project ini dikembangkan menggunakan React, Tailwind CSS, dan Express.js.</p>
+          <div class="tags">
+            <span>React</span><span>Tailwind CSS</span><span>Express.js</span><span>DASS-21</span><span>Dashboard UI</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn small primary view-details" type="button" data-project-id="nerva" data-i18n="projects.viewDetails">Lihat detail</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid compact-projects">
+        <article class="project-card compact-project clickable-project" data-project-id="notes" tabindex="0" role="button" data-i18n-aria-label="aria.project.notes" aria-label="Open Notes Studio project details">
+          <div class="project-media compact-media">
             <img src="assets/notes.png" alt="Notes Studio project screenshot" />
             <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
+            <div class="project-heading-row"><span class="project-number mono">03</span></div>
             <h3 data-i18n="project.notes.title">Notes Studio</h3>
-            <p data-i18n="project.notes.description">
-              Notes Studio adalah aplikasi catatan berbasis web untuk membuat, mengedit, mencari, menyematkan, mengarsipkan, mengimpor, dan mengekspor catatan.
-            </p>
-            <div class="tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Local Storage</span>
-            </div>
+            <p data-i18n="project.notes.description">Notes Studio adalah aplikasi catatan berbasis web yang dibuat untuk membuat, mengedit, mencari, menyematkan, mengarsipkan, mengimpor, dan mengekspor catatan. Project ini menggunakan penyimpanan lokal browser sehingga tetap dapat digunakan tanpa backend.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Local Storage</span></div>
             <div class="project-actions">
-              <button class="btn small primary view-details" type="button" data-project-id="notes" data-i18n="projects.viewDetails">Lihat Detail</button>
-              <a class="btn small ghost" href="https://mrivaldodestadhiohamzah.github.io/NoteStudio/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Demo Langsung</a>
-              <a class="btn small ghost" href="https://github.com/mrivaldodestadhiohamzah/NoteStudio" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source Code</a>
+              <button class="btn small primary view-details" type="button" data-project-id="notes" data-i18n="projects.viewDetails">Lihat detail</button>
+              <a class="btn small outline" href="https://mrivaldodestadhiohamzah.github.io/NoteStudio/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Live demo</a>
+              <a class="btn small outline" href="https://github.com/mrivaldodestadhiohamzah/NoteStudio" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source code</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card clickable-project" data-project-id="story" tabindex="0" role="button" aria-label="Open StoryNest project details">
-          <div class="project-media">
+        <article class="project-card compact-project clickable-project" data-project-id="story" tabindex="0" role="button" data-i18n-aria-label="aria.project.story" aria-label="Open StoryNest project details">
+          <div class="project-media compact-media">
             <img src="assets/storynest.png" alt="StoryNest project screenshot" />
             <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
+            <div class="project-heading-row"><span class="project-number mono">04</span></div>
             <h3 data-i18n="project.story.title">StoryNest</h3>
-            <p data-i18n="project.story.description">
-              StoryNest adalah aplikasi web untuk menulis dan mengelola cerita pendek dengan tampilan sederhana.
-            </p>
-            <div class="tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Responsive UI</span>
-            </div>
+            <p data-i18n="project.story.description">StoryNest adalah aplikasi web untuk menulis dan mengelola cerita pendek. Project ini menyediakan halaman daftar cerita, form penulisan cerita, dan tampilan yang sederhana agar pengguna dapat menyimpan cerita dengan lebih rapi.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Responsive Design</span></div>
             <div class="project-actions">
-              <button class="btn small primary view-details" type="button" data-project-id="story" data-i18n="projects.viewDetails">Lihat Detail</button>
-              <a class="btn small ghost" href="https://mrivaldodestadhiohamzah.github.io/StoryNest/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Demo Langsung</a>
-              <a class="btn small ghost" href="https://github.com/mrivaldodestadhiohamzah/StoryNest" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source Code</a>
+              <button class="btn small primary view-details" type="button" data-project-id="story" data-i18n="projects.viewDetails">Lihat detail</button>
+              <a class="btn small outline" href="https://mrivaldodestadhiohamzah.github.io/StoryNest/" target="_blank" rel="noopener noreferrer" data-i18n="projects.liveDemo">Live demo</a>
+              <a class="btn small outline" href="https://github.com/mrivaldodestadhiohamzah/StoryNest" target="_blank" rel="noopener noreferrer" data-i18n="projects.sourceCode">Source code</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card wide-card clickable-project" data-project-id="himo" tabindex="0" role="button" aria-label="Open HIMO project details">
-          <div class="project-media gallery himo-gallery">
-            <img src="assets/himo-before.png" alt="HIMO input screen" />
-            <img src="assets/himo-after.png" alt="HIMO result screen" />
+        <article class="project-card compact-project himo-project clickable-project" data-project-id="himo" tabindex="0" role="button" data-i18n-aria-label="aria.project.himo" aria-label="Open HIMO project details">
+          <div class="project-media himo-media">
+            <img src="assets/himo-before.png" alt="HIMO data input screen" />
+            <img src="assets/himo-after.png" alt="HIMO analysis result screen" />
             <img src="assets/himo-result.png" alt="HIMO account result screen" />
             <span class="image-overlay" data-i18n="projects.clickHint">Klik untuk melihat detail</span>
           </div>
           <div class="project-content">
-            <span class="project-label muted" data-i18n="project.himo.label">Earlier version before NERVA</span>
-            <h3 data-i18n="project.himo.title">HIMO / Hidden Mood</h3>
-            <p data-i18n="project.himo.description">
-              HIMO atau Hidden Mood adalah project awal untuk membantu pengguna mencatat kondisi mood dan melihat hasil analisis sederhana.
-            </p>
-            <div class="tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>ML Concept</span><span>UI/UX Design</span>
+            <div class="project-heading-row">
+              <span class="project-number mono">05</span>
+              <span class="project-label muted" data-i18n="project.himo.label">Earlier version before NERVA</span>
             </div>
+            <h3 data-i18n="project.himo.title">HIMO / Hidden Mood</h3>
+            <p data-i18n="project.himo.description">HIMO atau Hidden Mood adalah project awal untuk membantu pengguna mencatat kondisi mood dan melihat hasil analisis sederhana. Project ini menjadi dasar pengembangan untuk sistem yang lebih lengkap.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX Design</span><span>ML Concept</span></div>
             <div class="project-actions">
-              <button class="btn small primary view-details" type="button" data-project-id="himo" data-i18n="projects.viewDetails">Lihat Detail</button>
+              <button class="btn small primary view-details" type="button" data-project-id="himo" data-i18n="projects.viewDetails">Lihat detail</button>
             </div>
           </div>
         </article>
@@ -211,41 +248,46 @@
     </section>
 
     <section class="section skills-section" id="skills">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="skills.eyebrow">Keahlian</p>
-        <h2 data-i18n="skills.title">Teknologi dan area yang saya gunakan untuk membangun website.</h2>
+      <div class="section-intro">
+        <p class="section-index">03 / <span data-i18n="skills.index">Keahlian</span></p>
+        <div>
+          <h2 data-i18n="skills.title">Teknologi yang saya gunakan untuk membuat dan mengirimkan produk web.</h2>
+          <p class="section-lead" data-i18n="skills.lead">Saya memilih tools berdasarkan kebutuhan project, bukan sekadar menambah daftar.</p>
+        </div>
       </div>
-      <div class="skills-grid" aria-label="Skill list">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>UI/UX Design</span>
-        <span>Frontend Development</span>
-        <span>Responsive Design</span>
-        <span>Local Storage</span>
-        <span>GitHub Pages</span>
-        <span>Web Deployment</span>
-        <span>Machine Learning Integration Concept</span>
-        <span>Dashboard Design</span>
+      <div class="skills-groups">
+        <div class="skill-group">
+          <h3 data-i18n="skills.frontend">Frontend</h3>
+          <p>React · Next.js · JavaScript · TypeScript · HTML · CSS · Tailwind CSS</p>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.backend">Backend</h3>
+          <p>Node.js · Express.js · ASP.NET Core · REST API</p>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.data">Data & storage</h3>
+          <p>PostgreSQL · Entity Framework Core · Local Storage</p>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.tools">Tools & delivery</h3>
+          <p>Git · GitHub · Docker · Vercel · GitHub Pages · Responsive UI</p>
+        </div>
       </div>
     </section>
 
     <section class="section contact-section" id="contact">
-      <div class="contact-card">
+      <div class="contact-layout">
         <div>
-          <p class="eyebrow" data-i18n="contact.eyebrow">Kontak</p>
-          <h2 data-i18n="contact.title">Mari terhubung dan diskusikan peluang kerja atau kolaborasi.</h2>
-          <p data-i18n="contact.body">
-            Saya terbuka untuk kesempatan sebagai web developer, frontend developer, atau fullstack developer.
-          </p>
+          <p class="section-index">04 / <span data-i18n="contact.index">Kontak</span></p>
+          <h2 data-i18n="contact.title">Mari bicara tentang project berikutnya.</h2>
+          <p class="section-lead" data-i18n="contact.body">Saya terbuka untuk kesempatan sebagai Web Developer, Frontend Developer, atau Fullstack Developer.</p>
+          <span class="contact-phone" data-i18n="contact.phone">Telepon · 089624574877</span>
         </div>
         <div class="contact-links">
-          <a href="mailto:mrivaldodestadhiohamzah@gmail.com">Email</a>
-          <a href="https://github.com/mrivaldodestadhiohamzah" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/mrivaldodhz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://wa.me/6289624574877" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <span class="phone-link">089624574877</span>
+          <a href="mailto:mrivaldodestadhiohamzah@gmail.com"><span>Email</span><strong>mrivaldodestadhiohamzah@gmail.com</strong></a>
+          <a href="https://github.com/mrivaldodestadhiohamzah" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/mrivaldodestadhiohamzah</strong></a>
+          <a href="https://www.linkedin.com/in/mrivaldodhz/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/mrivaldodhz</strong></a>
+          <a href="https://wa.me/6289624574877" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>wa.me/6289624574877</strong></a>
         </div>
       </div>
     </section>
@@ -253,14 +295,23 @@
 
   <div class="modal-backdrop" id="project-modal" aria-hidden="true">
     <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" type="button" data-i18n-aria-label="modal.close" aria-label="Tutup">&times;</button>
+      <div class="modal-topbar">
+        <span class="mono" id="modal-counter">01 / 01</span>
+        <div class="modal-topbar-actions">
+          <div class="language-switch modal-language-switch" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-lang="id">ID</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <button class="modal-close" type="button" data-i18n-aria-label="modal.close" aria-label="Tutup">&times;</button>
+        </div>
+      </div>
       <div class="modal-gallery">
-        <button class="gallery-control prev" type="button" data-gallery-prev aria-label="Previous image">&lsaquo;</button>
+        <button class="gallery-control prev" type="button" data-gallery-prev data-i18n-aria-label="modal.previous" aria-label="Previous image">&lsaquo;</button>
         <figure class="modal-image-frame">
           <img id="modal-image" src="" alt="" />
           <video id="modal-video" controls autoplay playsinline muted loop poster="assets/nerva-interface.png" hidden></video>
         </figure>
-        <button class="gallery-control next" type="button" data-gallery-next aria-label="Next image">&rsaquo;</button>
+        <button class="gallery-control next" type="button" data-gallery-next data-i18n-aria-label="modal.next" aria-label="Next image">&rsaquo;</button>
         <div class="modal-thumbnails" id="modal-thumbnails" aria-label="Project image thumbnails"></div>
       </div>
       <div class="modal-content">
@@ -274,7 +325,7 @@
   </div>
 
   <footer class="site-footer">
-    <p data-i18n="footer.text">&copy; 2026 Portfolio M Rivaldo Destadhio Hamzah. Semua Hak Dilindungi.</p>
+    <p><span data-i18n="footer.text">© 2026 M. Rivaldo Destadhio Hamzah. Semua Hak Dilindungi.</span><span class="footer-mark">RIVALDO.DEV</span></p>
   </footer>
 
   <script src="script.js"></script>

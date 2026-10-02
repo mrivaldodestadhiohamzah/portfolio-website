@@ -1,27 +1,35 @@
-# M Rivaldo Destadhio Hamzah Portfolio
+# M. Rivaldo Destadhio Hamzah
 
-This is my personal portfolio website for showcasing several web development projects I have worked on. The site includes project previews, detailed image modals, live demo links where available, source code links where available, and a simple Indonesian/English language switcher.
+This is my personal portfolio website for showcasing web development work. It includes project previews, detailed screenshot galleries, a NERVA video walkthrough, selected live demos, and an Indonesian/English language switcher.
 
 Live portfolio: <https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 
 ## Features
 
-- Responsive portfolio layout for desktop, tablet, and mobile.
-- Bilingual interface in Indonesian and English.
-- Clickable project cards with modal/lightbox details.
-- Image gallery navigation for projects with multiple screenshots.
-- Video preview for the NERVA project.
-- Live demo and source code links for selected projects.
-- Static frontend-only setup, ready for GitHub Pages.
-
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages
+- Static HTML, CSS, and JavaScript setup that can be deployed directly to GitHub Pages.
+- Responsive layout for desktop, tablet, and mobile screens.
+- Indonesian and English content with language preference saved in local storage.
+- Clickable project cards with responsive modal galleries.
+- Keyboard and button navigation for multi-image project showcases.
+- NERVA video preview with a poster image fallback.
+- External demo and source links for projects where they are available.
 
 ## Projects
+
+### HireFlow
+
+HireFlow is a recruiting web application for managing candidates, hiring pipelines, jobs, interviews, and candidate context in one workspace. The portfolio uses six screenshots: the landing page, registration screen, dashboard, candidates view, jobs view, and recruitment pipeline.
+
+- Live Demo: <https://hireflow-zeta-eight.vercel.app/>
+- Source Code: <https://github.com/mrivaldodestadhiohamzah/hireflow>
+- Tech: Next.js, React, TypeScript, Tailwind CSS, ASP.NET Core, FastAPI, PostgreSQL
+
+### NERVA
+
+NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations. The portfolio presents NERVA as a showcase with a video walkthrough and interface screenshots.
+
+- Showcase only
+- Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21, dashboard UI, data visualization concept
 
 ### Notes Studio
 
@@ -46,12 +54,7 @@ HIMO or Hidden Mood is an early project designed to help users record their mood
 - Showcase only
 - Tech: HTML, CSS, JavaScript, UI/UX Design, Machine Learning Integration Concept
 
-### NERVA
-
-NERVA is an improved version of HIMO focused on monitoring user stress and mental wellness. It combines the DASS-21 questionnaire, mood text analysis, dashboard, history, analysis results, and video recommendations.
-
-- Showcase only
-- Tech: React, Tailwind CSS, Express.js, JavaScript, DASS-21 Questionnaire, Dashboard UI, Data Visualization Concept, Machine Learning Integration Concept
+HIMO and NERVA are presented as project showcases without Live Demo or Source Code buttons. Every project card can be opened to view its screenshots, explanation, and technology tags.
 
 ## Folder Structure
 
@@ -72,39 +75,44 @@ portfolio-website/
     |-- nerva-history.png
     |-- nerva-dashboard.png
     |-- nerva-result.png
-    `-- nerva-interface.png
+    |-- nerva-interface.png
+    |-- NervaVID.mp4
+    |-- hireflowlanding.png
+    |-- hireflowregis.png
+    |-- hiredash.png
+    |-- candidates.png
+    |-- jobs.png
+    `-- pipline.png
 ```
 
 ## Run Locally
 
-Open `index.html` directly in a browser, or run a small local server from the project folder:
+The site has no build step. Open `index.html` directly in a browser, or run a small local server from the project folder:
 
 ```bash
 python -m http.server 8099
 ```
 
-Then open:
-
-```text
-http://127.0.0.1:8099/
-```
+Then open <http://127.0.0.1:8099/>.
 
 ## Deploy To GitHub Pages
 
-This repository is deployed from the `main` branch.
+The repository is deployed from the `main` branch using the `/root` folder.
 
-1. Push the latest code to GitHub.
-2. Open the repository settings.
-3. Go to **Pages**.
-4. Set the source to **Deploy from a branch**.
-5. Choose branch **main** and folder **/root**.
-6. Save the settings.
-
-The deployed URL is:
-
-```text
-https://mrivaldodestadhiohamzah.github.io/portfolio-website/
+```bash
+git init
+git add .
+git commit -m "Initial portfolio website"
+git branch -M main
+git remote add origin https://github.com/mrivaldodestadhiohamzah/portfolio-website.git
+git push -u origin main
 ```
+
+In GitHub, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/root`, then click **Save**.
+
+The live URL is:
+
+<https://mrivaldodestadhiohamzah.github.io/portfolio-website/>
 
 ## Contact
 
